@@ -1,5 +1,4 @@
 #encoding: utf-8
-from telnetlib import theNULL
 
 def plus(value1, value2):
     return int(value1) + int(value2)

@@ -1,4 +1,7 @@
 #encoding: utf-8
+print("classTestModuleName",__name__)
+def classTestMethod1():
+    print("AAAAAAAAAAAAAAAAAAAAA")
 
 class Person:
     PersonName = "leehan"
