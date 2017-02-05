@@ -5,7 +5,7 @@ print(colors)
 colors.append("yeee")
 print(colors)
 colors.insert(1,"vie")
-print(colors)
+print(colors) 
 colors.extend(['ccc','bbbb'])
 print(colors)
 colors2=['rrrr','hhh']
