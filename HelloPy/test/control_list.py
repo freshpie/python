@@ -6,7 +6,7 @@ if a and 10/a:
 else:
     print("else")
 
-if a & 10/a:
+if int(a) & int(10/a):
     print(a)
 else:
     print("else")

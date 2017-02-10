@@ -1,41 +1,41 @@
-import os
+from os import *
 import time
 import glob
 
-print(os.path.abspath("."))
+print(path.abspath("."))
 
-print(os.path.basename("/Users/leehan/git/python/helloPy/test/binary"))
-print(os.path.dirname("/Users/leehan/git/python/helloPy/test/binary"))
+print(path.basename("/Users/leehan/git/python/helloPy/test/binary"))
+print(path.dirname("/Users/leehan/git/python/helloPy/test/binary"))
 
-print(os.path.exists("/Users/leehan"))
-print(os.path.exists("/usr"))
+print(path.exists("/Users/leehan"))
+print(path.exists("/usr"))
 
-print(os.path.expanduser("~/leehan"))
+print(path.expanduser("~/leehan"))
 
-print(os.environ)
-print(os.path.expandvars("$SYSTEMROOT $USER"))
-print(os.path.expandvars("$HOME"))
+print(environ)
+print(path.expandvars("$SYSTEMROOT $USER"))
+print(path.expandvars("$HOME"))
 
-print(os.path.getmtime("binary"))
-print(time.gmtime(os.path.getmtime("binary")))
-print(time.ctime(os.path.getmtime("binary")))
+print(path.getmtime("binary"))
+print(time.gmtime(path.getmtime("binary")))
+print(time.ctime(path.getmtime("binary")))
 
-print(os.path.getctime("hello.py"))
-print(time.gmtime(os.path.getctime("hello.py")))
-print(time.ctime(os.path.getctime("hello.py")))
-
-
-print(os.path.getsize("hello.py"))
-print(os.path.getsize("text.txt"))
-
-print(os.path.isfile("hello.py"))
-print(os.path.isfile("/Users"))
-print(os.path.isdir("hello.py"))
-print(os.path.isdir("/Users"))
+print(path.getctime("hello.py"))
+print(time.gmtime(path.getctime("hello.py")))
+print(time.ctime(path.getctime("hello.py")))
 
 
-print(glob.glob(os.path.abspath(".") + "/*.txt"))
-for i in glob.iglob(os.path.abspath(".") + "/*.txt"):
+print(path.getsize("hello.py"))
+print(path.getsize("text.txt"))
+
+print(path.isfile("hello.py"))
+print(path.isfile("/Users"))
+print(path.isdir("hello.py"))
+print(path.isdir("/Users"))
+
+
+print(glob.glob(path.abspath(".") + "/*.txt"))
+for i in glob.iglob(path.abspath(".") + "/*.txt"):
     print(i)
     
 def traverse(dir, depth):
@@ -45,11 +45,11 @@ def traverse(dir, depth):
         else:
             prefix ="|" + " "*depth + "+--"
             
-        if os.path.isdir(obj):
-            print(prefix +"(D)" + os.path.basename(obj))
+        if path.isdir(obj):
+            print(prefix +"(D)" + path.basename(obj))
             traverse(obj, depth+1)
-        elif os.path.isfile(obj):
-            print(prefix +"(F)" + os.path.basename(obj))
+        elif path.isfile(obj):
+            print(prefix +"(F)" + path.basename(obj))
         else:
             print(prefix + "unknown", obj)
 
